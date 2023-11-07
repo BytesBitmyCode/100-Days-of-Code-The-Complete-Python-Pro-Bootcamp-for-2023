@@ -55,7 +55,16 @@ if question_1.lower() == "yes":
    
     if question_2.lower() == "yes": 
         print("Let's move on to the next part of the interview. System Design.\n\n")
-        # You should ask the next question here or take appropriate action for the next part of the interview
+
+        question_3 = input("Have you designed a database schema for a multi-tenant application before? Yes or No\n")
+        
+        if question_3.lower() == "yes":
+            question_4 = input("Do you have experience with load balancing and horizontal scaling? Yes or No\n")
+
+            if question_4.lower() == "yes": 
+                print("Congrats. Let's move on to the next part of the interview. Problem-Solving Skills.\n\n") 
+        else:
+            print(fail_interview)   
     else:
         print(fail_interview)
 else:
